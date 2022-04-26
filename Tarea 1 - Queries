@@ -135,9 +135,9 @@ from orders o
 order by o.freight desc limit 1;
 
 ---PREGUNTA 17: Cómo creamos una columna en customers que nos diga si un cliente es bueno, regular, o malo?
-select o.customer_id , sum((od.unit_price-od.unit_price*od.discount)*od.quantity )
-from order_details od, orders o 
-group by o.customer_id;
+select * from customers c;
+select * from order_details od;
+select * from orders o;
 
 select o.customer_id , sum((od.unit_price-od.unit_price*od.discount)*od.quantity ) as ventas,
 case 
