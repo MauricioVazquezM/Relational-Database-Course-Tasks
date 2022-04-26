@@ -141,11 +141,11 @@ group by o.customer_id;
 
 select o.customer_id , sum((od.unit_price-od.unit_price*od.discount)*od.quantity ) as ventas,
 case 
-	when sum((od.unit_price-od.unit_price*od.discount)*od.quantity )>5000000 then 'Bueno'
-	when sum((od.unit_price-od.unit_price*od.discount)*od.quantity )<1000000 then 'Malo'
+	when sum((od.unit_price-od.unit_price*od.discount)*od.quantity )>75000 then 'Bueno'
+	when sum((od.unit_price-od.unit_price*od.discount)*od.quantity )<10000 then 'Malo'
 	else 'Regular'
 end as ranking
-from order_details od , orders o 
+from order_details od join orders o on (od.order_id=o.order_id) join customers c on (o.customer_id=c.customer_id)
 group by o.customer_id
 order by ventas desc;
 
