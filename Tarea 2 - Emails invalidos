@@ -47,5 +47,5 @@ select * from emails e;
 
 select nombres,email
 from emails e 
-where email like '%@%_.' or email not like '%@%.%' or email like '%@.%' or email like '&@%..%' or email like '-_%@%_-' or email not like '%@%' or email like '%,%'
+where email like '%@%_.' or email not like '%@%.%' or email like '%@.%' or email like '&@%..%' or email like '-_%@%_-' or email not like '%@%' or email like '%,%' or email like '@_%_@' or email like '%@@%' or email like '%;%' email like '%:%'
 order by nombres asc;
