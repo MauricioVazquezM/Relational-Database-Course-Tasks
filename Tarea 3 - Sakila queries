@@ -44,6 +44,7 @@ select * from address a;
 select * from inventory i;
 select * from rental r;
 select * from payment p;
+select * from store s;
 
 select a.address as store,sum(p.amount) as revenue
 from address a join store s using (address_id) join inventory i using(store_id) join rental r using(inventory_id) join payment p using(rental_id)
