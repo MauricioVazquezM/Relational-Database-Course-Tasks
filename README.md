@@ -1,4 +1,4 @@
-# Relational Database Course
+# Relational Database Course Tasks
 
 ![image](https://kinsta.com/wp-content/uploads/2022/02/postgres-logo.png)
 
